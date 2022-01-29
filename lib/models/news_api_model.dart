@@ -27,7 +27,6 @@ class Article {
         required this.url,
         required this.urlToImage,
         required this.publishedAt,
-        required this.content,
     });
 
     Source source;
@@ -36,7 +35,6 @@ class Article {
     String url;
     String urlToImage;
     DateTime publishedAt;
-    String content;
 
     factory Article.fromJson(Map<String, dynamic> json) => Article(
         source: Source.fromJson(json["source"]),
@@ -45,7 +43,6 @@ class Article {
         url: json["url"],
         urlToImage: json["urlToImage"],
         publishedAt: DateTime.parse(json["publishedAt"]),
-        content: json["content"],
     );
 
    
